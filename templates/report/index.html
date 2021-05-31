@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="="utf-8>
+        <title>Petroleum Report</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+    <body>
+      <div class="container">
+        <h1 id="top"> PETROLEUM PRODUCTS REPORTS</h1>
+        <br>
+        <h2 >
+        Here are the solved problems:  </h2>
+        <br>
+
+    <div class="navbar-nav">
+      <a class="navbar-brand" href="{% url 'newdata' %}">Newly stored data</a>
+      <a class='nav-item nav-link' href="{% url 'overallsales' %}">Click for overall average sales of each products by country excluding zero sales</a>
+      <a class='nav-item nav-link'  href="{% url 'avgsale' %}">Click for average sale in 2 year interval</a>
+      <a class='nav-item nav-link'  href="{% url 'leastsale' %}">Clicl for least sale in each year of each product</a>
+    </div>
+
+  </div>
+
+    </body>
+
+</html>

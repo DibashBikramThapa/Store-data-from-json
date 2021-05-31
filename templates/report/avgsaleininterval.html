@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="="utf-8>
+        <title>Petroleum Report</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+    <body>
+      <div class="container">
+
+        <h1 id="top">Average sales for each petroleum products in interval of 2 years </h1>
+        <br><br>
+       <h2 id="here">Here is the list:</h2>
+       <div class="table">
+
+
+         <table class="art table-sm table-hover table-bordered">
+            <thead>
+            <th>year</th>
+            <th>petroleum_product</th>
+            <th>sale</th>
+
+            </thead>
+        {% for i in list_avgsale %}
+        <tr>
+            <td>{{ i.year }}</td>
+            <td>{{ i.petroleum_product}}</td>
+            <td>{{ i.sale }}</td>
+
+        </tr>
+        {% endfor %}
+        </table>
+        </div>
+
+      </div>
+
+
+
+    </body>
